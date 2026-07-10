@@ -8,48 +8,74 @@ canvas {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
-body{
-    margin:0;
-    overflow:hidden;
-    background:#000;
-}
-
-canvas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000033;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
 
 .mensaje{
-    position:absolute;
-    top:40px;
-    left:50%;
-    transform:translateX(-50%);
-    z-index:10;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 
-    font-family:'Great Vibes', cursive;
-    font-size:58px;
-    color:#ffb6d9;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 1px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #ffffff;
 
     text-shadow:
-        0 0 10px #ff69b4,
-        0 0 20px #ff69b4,
-        0 0 35px #ff1493;
+        0 0 5px rgba(255,255,255,.8),
+        0 0 12px rgba(255,255,255,.6),
+        0 0 25px rgba(255,255,255,.3);
 
-    animation: latidoTexto 1.6s infinite ease-in-out;
-    pointer-events:none;
+    pointer-events: none;
 }
 
-@keyframes latidoTexto{
+.mensaje span{
+    display: inline-block;
+    animation: salto 1.8s ease-in-out infinite;
+}
+
+.mensaje span:nth-child(1){animation-delay:.00s;}
+.mensaje span:nth-child(2){animation-delay:.05s;}
+.mensaje span:nth-child(3){animation-delay:.10s;}
+.mensaje span:nth-child(4){animation-delay:.15s;}
+.mensaje span:nth-child(5){animation-delay:.20s;}
+.mensaje span:nth-child(6){animation-delay:.25s;}
+.mensaje span:nth-child(7){animation-delay:.30s;}
+.mensaje span:nth-child(8){animation-delay:.35s;}
+.mensaje span:nth-child(9){animation-delay:.40s;}
+.mensaje span:nth-child(10){animation-delay:.45s;}
+.mensaje span:nth-child(11){animation-delay:.50s;}
+.mensaje span:nth-child(12){animation-delay:.55s;}
+.mensaje span:nth-child(13){animation-delay:.60s;}
+.mensaje span:nth-child(14){animation-delay:.65s;}
+.mensaje span:nth-child(15){animation-delay:.70s;}
+.mensaje span:nth-child(16){animation-delay:.75s;}
+.mensaje span:nth-child(17){animation-delay:.80s;}
+.mensaje span:nth-child(18){animation-delay:.85s;}
+.mensaje span:nth-child(19){animation-delay:.90s;}
+.mensaje span:nth-child(20){animation-delay:.95s;}
+.mensaje span:nth-child(21){animation-delay:1s;}
+.mensaje span:nth-child(22){animation-delay:1.05s;}
+.mensaje span:nth-child(23){animation-delay:1.10s;}
+.mensaje span:nth-child(24){animation-delay:1.15s;}
+.mensaje span:nth-child(25){animation-delay:1.20s;}
+
+@keyframes salto{
     0%,100%{
-        transform:translateX(-50%) scale(1);
+        transform: translateY(0);
     }
-    50%{
-        transform:translateX(-50%) scale(1.08);
+    15%{
+        transform: translateY(-8px);
+    }
+    30%{
+        transform: translateY(0);
     }
 }

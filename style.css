@@ -29,10 +29,7 @@ canvas {
 
     color: #ffffff;
 
-    text-shadow:
-        0 0 5px rgba(255,255,255,.8),
-        0 0 12px rgba(255,255,255,.6),
-        0 0 25px rgba(255,255,255,.3);
+    text-shadow: none;
 
     pointer-events: none;
 }

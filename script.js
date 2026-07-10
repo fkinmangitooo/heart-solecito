@@ -51,9 +51,17 @@ var init = function () {
     var pointsOrigin = [];
     var i;
     var dr = mobile ? 0.3 : 0.1;
-    for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 210, 13, 0, 0));
-    for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 150, 9, 0, 0));
-    for (i = 0; i < Math.PI * 2; i += dr) pointsOrigin.push(scaleAndTranslate(heartPosition(i), 90, 5, 0, 0));
+    // Tamaño del corazón según el dispositivo
+var heartScale = Math.min(width, height) / 900;
+
+for (i = 0; i < Math.PI * 2; i += dr)
+    pointsOrigin.push(scaleAndTranslate(heartPosition(i), 210 * heartScale, 13 * heartScale, 0, 0));
+
+for (i = 0; i < Math.PI * 2; i += dr)
+    pointsOrigin.push(scaleAndTranslate(heartPosition(i), 150 * heartScale, 9 * heartScale, 0, 0));
+
+for (i = 0; i < Math.PI * 2; i += dr)
+    pointsOrigin.push(scaleAndTranslate(heartPosition(i), 90 * heartScale, 5 * heartScale, 0, 0));
     var heartPointsCount = pointsOrigin.length;
 
     var targetPoints = [];
